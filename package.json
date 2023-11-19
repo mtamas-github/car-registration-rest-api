@@ -1,0 +1,17 @@
+{
+  "name": "car-registration-rest-api",
+  "version": "0.0.1",
+  "description": "Car Registration REST API communicating with SOAP API",
+  "main": "restApi.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "axios": "^0.24.0",
+    "body-parser": "^1.19.1",
+    "xml2js": "^0.4.23",
+    "swagger-ui-express": "^4.1.6",
+    "yamljs": "^0.3.0"
+  }
+}
