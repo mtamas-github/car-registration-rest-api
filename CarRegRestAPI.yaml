@@ -1,0 +1,49 @@
+openapi: 3.0.0
+info:
+  title: Car Registration REST API demo code
+  version: 0.0.1
+paths:
+  /api/plates:
+    get:
+      summary: Get available plates
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              example:
+                plateNumbers: ["ABC123", "XYZ789"]
+  /api/details/{plateNumber}:
+    get:
+      summary: Get registration details
+      parameters:
+        - in: path
+          name: plateNumber
+          required: true
+          description: The plate number
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              example:
+                details: { plateNumber: "ABC123", registrationStatus: "Active" }
+  /api/renew/{plateNumber}:
+    post:
+      summary: Renew registration
+      parameters:
+        - in: path
+          name: plateNumber
+          required: true
+          description: The plate number
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              example:
+                success: true
